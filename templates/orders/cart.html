@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <link rel="icon" href="../../static/img/Fevicon.png" type="image/png">
+    <link rel="stylesheet" href="../../static/vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../static/vendors/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../../static/vendors/linericon/style.css">
+    <link rel="stylesheet" href="../../static/vendors/nice-select/nice-select.css">
+    <link rel="stylesheet" href="../../static/vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../static/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../static/css/style_1.css">
+
+<main class="site-main">
+
+  <section class="cart_area">
+      <div class="container">
+          <div class="cart_inner">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Товар</th>
+                              <th scope="col">Цена за шт.</th>
+                              <th scope="col">Количество</th>
+                              <th scope="col">Сумма</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                      {% for product_in_basket in products_in_basket %}
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          {% for image_item in products_in_basket.productimage_set.all %}
+                                              <img src="{{ image_item.image.url }}" alt="">
+                                          {% endfor %}
+                                      </div>
+                                      <div class="media-body">
+                                          <p>{{ product_in_basket.product.name }}</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>{{ product_in_basket.price_per_item }} RUB</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input value="{{ product_in_basket.nmb }}" type="number"
+                                                   class="product-in-basket-nmb" name="product_in_basket_{{ product_in_basket.id }}">
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>{{ product_in_basket.total_price }}</h5>
+                              </td>
+                          </tr>
+                      {% endfor %}
+                          <tr class="out_button_area">
+                              <td class="d-none-l">
+
+                              </td>
+                              <td class="">
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                  <div class="checkout_btn_inner d-flex align-items-center">
+                                      <a class="gray_btn" href="{% url 'home' %}">Продолжить покупки</a>
+                                      <a class="primary-btn ml-2" href="{% url 'checkout' %}">Заказать!</a>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <script src="../../static/vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../static/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../static/vendors/skrollr.min.js"></script>
+    <script src="../../static/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../../static/vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="../../static/vendors/jquery.ajaxchimp.min.js"></script>
+    <script src="../../static/vendors/mail-script.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script src="../../static/js/cart.js"></script>
+
+</main>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<section class="blog-banner-area" id="contact">
+		<div class="container h-100">
+			<div class="blog-banner">
+				<div class="text-center">
+					<h1>Свяжитесь с нами</h1>
+					<nav aria-label="breadcrumb" class="banner-breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="{% url 'home' %}">Домашняя</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Техподдержка</li>
+                        </ol>
+                    </nav>
+				</div>
+			</div>
+        </div>
+	</section>
+
+    <section class="section-margin--small">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-home"></i></span>
+                        <div class="media-body">
+                            <h3>Российская Федерация</h3>
+                            <p>Багратионовский проезд, д.7, корпус 3</p>
+                        </div>
+                    </div>
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-headphone"></i></span>
+                        <div class="media-body">
+                            <h3>8-968-414-4400</h3>
+                            <h3>8-934-444-4334</h3>
+                            <p>Работем круглосуточно</p>
+                        </div>
+                    </div>
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-email"></i></span>
+                        <div class="media-body">
+                            <h3>neformatinc@gmail.com</h3>
+                            <h3>neformat_inc@mail.ru</h3>
+                            <p>Принимаем ваши отзывы и обращения круглосуточно!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-9">
+                    <h5 class="text-center">Форма заявки на ремонт:</h5>
+                    <br>
+                    <form action="#" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">{% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.name.name }}" id="name" required type="text" placeholder="Введите Ваше имя">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.email.name }}" id="email" required type="email" placeholder="Ваш email">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.phone.name }}" id="number" required type="tel" placeholder="Ваш номер телефона">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.subject.name }}" id="subject" required type="text" placeholder="Тема обращения">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <textarea class="form-control different-control w-100" name="{{ form.message.name }}" id="message" cols="30" rows="5" placeholder="Текст сообщения"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center text-md-right mt-3">
+                            <button type="submit" class="button button--active button-contactForm">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="icon" href="../../static/img/Fevicon.png" type="image/png">
+    <link rel="stylesheet" href="../../static/vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../static/vendors/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../../static/vendors/linericon/style.css">
+    <link rel="stylesheet" href="../../static/vendors/nice-select/nice-select.css">
+    <link rel="stylesheet" href="../../static/vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../static/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../static/css/style_1.css">
+<main class="site-main">
+	<div class="product_image_area">
+		<div class="container">
+			<div class="row s_product_inner">
+				<div class="col-lg-6">
+					<div class="owl-carousel owl-theme s_Product_carousel">
+                        {% for image_item in products.productimage_set.all %}
+						<div class="single-prd-item">
+                            <img class="img-fluid" src="{{ image_item.image.url }}" alt="">
+						</div>
+                        {% endfor %}
+					</div>
+				</div>
+				<div class="col-lg-5 offset-lg-1">
+					<div class="s_product_text">
+						<h3>{{ products.name }}</h3>
+						<h2>{{ products.price }} ₽</h2>
+						<ul class="list">
+							<li><a class="active" href="#"><span>Категория </span> : {{ products.category }}</a></li>
+							<li><a href="#"><span>В наличии</span> : да</a></li>
+						</ul>
+						<p>{{ products.description }}</p>
+                        <form id="form_buying_product" class="form-inline" action="{% url 'basket_adding' %}">{% csrf_token %}
+                            <div class="form-group">
+                               <input type="number" class="form-control" name="number" id="number">
+                            </div>
+                            <div class="form-group">
+                               <button type="submit" id="submit_btn" class="button primary-btn"
+                                       data-product.id = "{{ products.id }}"
+                                       data-product.name = "{{ products.name }}"
+                                       data-product.price = "{{ products.price }}">
+                                   <a>Добавить в корзину</a>
+                                </button>
+                            </div>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <br><br>
+    <section class="section-margin calc-60px">
+        <div class="container">
+            <div class="section-intro pb-60px">
+            <p>Часто покупают</p>
+            <h2>Топовые <span class="section-intro__style">продажи |</span></h2>
+            </div>
+            <div class="owl-carousel owl-theme" id="bestSellerCarousel">
+                {% for products in top_products  %}
+                    {% include 'products/top_product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <script src="../../static/vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../static/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../static/vendors/skrollr.min.js"></script>
+    <script src="../../static/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../../static/vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="../../static/vendors/jquery.ajaxchimp.min.js"></script>
+    <script src="../../static/vendors/mail-script.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script src="../../static/js/cart.js"></script>
+</main>
+{% endblock %}

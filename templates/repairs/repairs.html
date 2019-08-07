@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="site-main">
+    <section class="section-margin mt-0">
+        <div class="owl-carousel owl-theme hero-carousel">
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_makbooks.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'laptops' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>MacBook</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_smartphones.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'smartphones' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Смартфоны</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_accessories.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'cables' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Кабели, шнуры для передачи данных</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_iphone_case.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'iphone_case' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Чехлы на iPhone</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_power_bank.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'power_bank' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Внешние аккумуляторы</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_holder.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'holder' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Держатели</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_glass_film.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'glass_film' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Защитные стекла</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_wall_charger.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'wall_charger' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Зарядные устройства</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_other.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'other' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Разное</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="product_description_area">
+		<div class="container">
+			<div class="tab-content">
+                <p class="text-center">Neformat-inc выполнит Вам ремонт устройства любой сложности! Мы готовы за минимальную сумму и время, восстановить ваш Iphone (айфон) , ipad, maсbook на выезде, у вас дома. Кроме того, ремонт айфона (IPhone) производится при Вас! Вы сможете задать интересующие вопросы мастеру, и проследить качество выполняемого ремонта.</p>
+            <br>
+				<div class="">
+					<div class="table-responsive">
+						<table class="table">
+							<tbody>
+                                <tr>
+									<td>
+										<h6>Услуга</h6>
+									</td>
+									<td>
+										<h6>IPhone 4/4s</h6>
+									</td>
+                                    <td>
+										<h6>IPhone 5/5c</h6>
+									</td>
+                                    <td>
+										<h6>IPhone 5s</h6>
+									</td>
+									<td>
+										<h6>IPhone 6</h6>
+									</td>
+                                    <td>
+										<h6>IPhone 6+</h6>
+									</td>
+                                    <td>
+										<h6>IPhone 6s</h6>
+									</td>
+                                    <td>
+										<h6>IPhone 6s+</h6>
+									</td>
+                                    <td>
+										<h6>IPhone SE</h6>
+									</td>
+									<td>
+										<h6>IPhone 7</h6>
+									</td>
+                                    <td>
+										<h6>IPhone 7+</h6>
+									</td>
+                                    <td>
+										<h6>IPhone 8</h6>
+									</td>
+                                    <td>
+										<h6>IPhone 8+</h6>
+									</td>
+									<td>
+										<h6>IPhone X</h6>
+									</td>
+                                    <td>
+										<h6>IPhone Xr</h6>
+									</td>
+                                    <td>
+										<h6>IPhone Xs</h6>
+									</td>
+                                    <td>
+										<h6>IPhone Xs MAX</h6>
+									</td>
+								</tr>
+								{% for repairs in all_repairs  %}
+                                    {% include 'repairs/repair_item.html' %}
+                                {% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<section class="section-margin--small">
+        <div class="container">
+            <div class="row">
+                <p class="text-center">Вы всегда можете оставить он-лайн заявку для ремонта Вашей техники. Заполните её и с Вами свяжется наш сотрудник для уточнения информации и назначения времени.</p>
+                <div class="col-md-12 col-lg-12">
+                    <br><br>
+                    <form action="#" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">{% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.name.name }}" id="name" required type="text" placeholder="Введите Ваше имя">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.email.name }}" id="email" required type="email" placeholder="Ваш email">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.phone.name }}" id="number" required type="tel" placeholder="Ваш номер телефона">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <textarea class="form-control different-control w-100" name="{{ form.message.name }}" id="message" cols="30" rows="5" placeholder="Ваш адрес"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center text-md-right mt-3">
+                            <button type="submit" class="button button--active button-contactForm">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="subscribe-position">
+        <div class="container">
+            <div class="subscribe text-center">
+                <h3 class="subscribe__title">Получайте актуальные новости о поступлении товара |</h3>
+                <p>Подпишитесь на рассылку</p>
+                <div id="">
+                    <form action="#" method="post" class="subscribe-form form-inline mt-5 pt-1">{% csrf_token %}
+                        <div class="form-group ml-sm-auto">
+                            <input class="form-control mb-1" required type="email" placeholder="Введите Ваш email" name="{{ form.email.name }}" value="{{ request.POST.name}}" >
+                        <div class="info"></div>
+                        </div>
+                        <button class="button button-subscribe mr-auto mb-1" type="submit">Подписаться!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+<div class="card text-center card-product">
+    <div class="card-product__img">
+        <a><img class="img-fluid" src="{{ products.image.url }}" alt=""></a>
+        <ul class="card-product__imgOverlay">
+            <a href="{% url 'product' products.product.id %}"><li><button><i class="ti-shopping-cart"></i></button></li></a>
+        </ul>
+    </div>
+    <div class="card-body">
+        <p>{{ products.product.category }}</p>
+        <h4 class="card-product__title"><a href="{% url 'product' products.product.id %}">{{ products.product.name }}</a></h4>
+        <p class="card-product__price">{{ products.product.price }} RUB</p>
+    </div>
+</div>

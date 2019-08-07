@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neformat-inc</title>
+</head>
+<body>
+    <h3>Здравствуйте!</h3>
+    <p>Ваш заказ получен!</p>
+    {% for product_in_order in products_in_order %}
+        <p>{{ product_in_order.product.name }} {{product_in_order.nmb }} шт.
+            по {{ product_in_order.price_per_item }} RUB = {{product_in_order.total_price }} RUB
+        </p>
+    {% endfor %}
+    <p>Скоро с Вами свяжется наш сотрудник для уточнения заказа!</p>
+    <p>Спасибо, что выбрали нас! С уважением, neformat-inc</p>
+</body>
+</html>

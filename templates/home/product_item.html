@@ -1,0 +1,19 @@
+<div class="col-md-6 col-lg-4 col-xl-3">
+    <div class="card text-center card-product">
+        <div class="card-product__img">
+            <a href="{% url 'product' products.product.id %}">
+                <img class="card-img" src="{{ products.image.url }}" alt="">
+            </a>
+            <ul class="card-product__imgOverlay">
+                <a href="{% url 'product' products.product.id %}"><li><button><i class="ti-shopping-cart"></i></button></li></a>
+            </ul>
+        </div>
+        <div class="card-body">
+            {% if products.product.vendor_code %}
+                <p>Артикул: {{ products.product.vendor_code }}</p>
+            {% endif %}
+            <h4 class="card-product__title"><a href="{% url 'product' products.product.id %}">{{ products.product.name }}</a></h4>
+            <p class="card-product__price">{{ products.product.price }} RUB</p>
+        </div>
+    </div>
+</div>

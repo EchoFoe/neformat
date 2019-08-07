@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neformat-inc</title>
+</head>
+<body>
+    <h3>Здравствуйте!</h3>
+    <p>У нас новый заказ</p>
+
+{#    <ul>#}
+{#        {% for key, value in order_fields.items %}#}
+{#            <li><b>{{ key }}:</b>{{ value }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+    <hr>
+    <ul>
+        <li>
+            <b>Имя клиента:</b> {{ order.customer_name }}
+        </li>
+        <li>
+            <b>Е-мейл клиента:</b> {{ order.customer_email }}
+        </li>
+        <li>
+            <b>Телефон клиента:</b> {{ order.customer_phone }}
+        </li>
+        <li>
+            <b>Адрес клиента:</b> {{ order.customer_address }}
+        </li>
+        <li>
+            <b>Сумма покупки:</b> {{ order.total_price }} RUB
+        </li>
+    </ul>
+        <p>
+            Детали заказа:
+        </p>
+    <ul>
+        {% for product_in_order in products_in_order %}
+            <li>{{ product_in_order.product.name }} {{product_in_order.nmb }} шт.
+                по {{ product_in_order.price_per_item }} RUB = {{product_in_order.total_price }} RUB
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
