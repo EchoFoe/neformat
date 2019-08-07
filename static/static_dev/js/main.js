@@ -13,7 +13,7 @@ $(function() {
   $(".hero-carousel").owlCarousel({
     items:3,
     margin: 10,
-    autoplay:false,
+    autoplay:true,
     autoplayTimeout: 5000,
     loop:true,
     nav:false,
