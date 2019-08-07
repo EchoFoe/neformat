@@ -44,5 +44,3 @@ class SendingEmail(object):
         if order:
             kwargs["order"] = order
         EmailSendingFact.objects.create(**kwargs)
-
-    print('Email was sent succesfully!')
