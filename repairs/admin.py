@@ -56,8 +56,8 @@ admin.site.register(RepairImage, RepairImageAdmin)
 
 class StatementAdmin(admin.ModelAdmin):
     save_as = True
-    fields = [('email', 'name', 'phone'), 'message', ('created', 'updated')]
-    list_display = ['name', 'email', 'phone', 'Сообщение', 'created']
+    fields = [('email', 'name', 'phone'), 'subject', 'message', ('created', 'updated')]
+    list_display = ['name', 'email', 'phone', 'subject', 'Сообщение', 'created']
     list_filter = ['email']
     search_fields = ['email', 'name', 'phone']
 

@@ -17,7 +17,7 @@ class OrderAdmin (admin.ModelAdmin):
     save_as = True
     fields = [('user', 'total_price', 'Status'), ('customer_name', 'customer_email', 'customer_phone'), 'customer_address']
     # list_display = [field.name for field in Order._meta.fields]
-    list_display = ['id', 'user', 'customer_name', 'customer_email', 'customer_address', 'total_price', 'Status', 'created' ]
+    list_display = ['id', 'user', 'customer_name', 'customer_email', 'customer_address', 'total_price', 'Status', 'created']
     inlines = [ProductInOrderInline]
     search_fields = ['customer_name', 'customer_phone']
     list_filter = ['Status']

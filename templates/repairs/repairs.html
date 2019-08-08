@@ -163,6 +163,9 @@
                                 <div class="form-group">
                                     <input class="form-control" name="{{ form.phone.name }}" id="number" required type="tel" placeholder="Ваш номер телефона">
                                 </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.subject.name }}" id="name" required type="text" placeholder="Опишите Вашу проблему">
+                                </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="form-group">
@@ -183,7 +186,7 @@
     <section class="subscribe-position">
         <div class="container">
             <div class="subscribe text-center">
-                <h3 class="subscribe__title">Получайте актуальные новости о поступлении товара |</h3>
+                <h3 class="subscribe__title">Получайте актуальные новости о поступлении товара </h3>
                 <p>Подпишитесь на рассылку</p>
                 <div id="">
                     <form action="#" method="post" class="subscribe-form form-inline mt-5 pt-1">{% csrf_token %}

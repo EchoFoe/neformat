@@ -84,7 +84,8 @@ class Statement(models.Model):
     name = models.CharField(max_length=16, blank=True, null=True, verbose_name='Имя')
     phone = models.CharField(max_length=19, blank=True, null=True, default='8-999-999-9999', verbose_name='Номер телефона')
     email = models.EmailField(max_length=128, default='example@domain.com', verbose_name='Емейл')
-    message = models.TextField(max_length=256, blank=True, null=True, default=None, verbose_name='Текст сообщения')
+    subject = models.CharField(max_length=128, blank=True, null=True, default=None, verbose_name='Тема обращения')
+    message = models.TextField(max_length=256, blank=True, null=True, default=None, verbose_name='Адрес клиента')
     created = models.DateTimeField(default=timezone.now, verbose_name='Дата обращения')
     updated = models.DateTimeField(default=timezone.now, verbose_name='Дата ред-ия записи')
 
