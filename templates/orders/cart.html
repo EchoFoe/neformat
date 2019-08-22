@@ -13,10 +13,44 @@
     <link rel="stylesheet" href="../../static/vendors/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="../../static/css/style_1.css">
 
+
+
 <main class="site-main">
 
   <section class="cart_area">
       <div class="container">
+      <div class="basket-container">
+                     <a href="" class="text-color-in-basket-container">Корзина заказов
+                         <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                         <span id="basket_total_amount"></span>
+                            <span id="basket_total_nmb">
+                                {% if products_total_nmb %}
+                                    ({{ products_total_nmb }})
+                                {% else %}
+                            (0)
+                                {% endif %}
+                            </span>
+                     </a>
+{#                <form id="form_buying_product" action="{% url 'basket_adding' %}">{% csrf_token %}#}
+                    <div class="basket-items hidden">
+                        <ul class="">
+                            {% for product_in_basket in products_in_basket %}
+                            <li>
+                            {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт. по
+                                {{ product_in_basket.price_per_item }} руб.
+                                <a class="delete-item" href=""  data-product_id="{{ product_in_basket.id }}">
+                                    <span class="glyphicon glyphicon-remove" ></span>elfkbnm</a>
+{#                            <form id="form_buying_product" action="{% url 'basket_adding' %}">{% csrf_token %}#}
+{#                                {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт. по#}
+{#                                {{ product_in_basket.price_per_item }} руб.#}
+{#                                <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}" > x </a>#}
+{#                            </form>#}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+{#                </form>#}
+                </div>
           <div class="cart_inner">
               <div class="table-responsive">
                   <table class="table">
