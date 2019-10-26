@@ -27,6 +27,7 @@ def smartphones(request):
     all_products = ProductImage.objects.filter(is_active=True, is_main=True, product__is_active=True)
     new_products = all_products.filter(product__status__id=1)
     products_phones = all_products.filter(product__category__id=1)
+    products_iphone_11 = all_products.filter(product__category__id=11)
 
     form = SubscriberForm(request.POST or None)
 
@@ -191,6 +192,41 @@ def other(request):
         new_form = form.save()
 
     return render(request, 'accessories/other.html', locals())
+
+def iPhone_11(request):
+
+    all_products = ProductImage.objects.filter(is_active=True, is_main=True, product__is_active=True)
+    new_products = all_products.filter(product__status__id=1)
+    products_iphone_11 = all_products.filter(product__category__id=11)
+
+    form = SubscriberForm(request.POST or None)
+
+    if request.method == "POST" and form.is_valid():
+        print(request.POST)
+        print(form.cleaned_data)
+        data = form.cleaned_data
+        print(form.cleaned_data["email"])
+        new_form = form.save()
+
+    return render(request, 'iPhone_11/iPhone_11.html', locals())
+
+
+def iPhone_11_pro(request):
+
+    all_products = ProductImage.objects.filter(is_active=True, is_main=True, product__is_active=True)
+    new_products = all_products.filter(product__status__id=1)
+    products_iphone_11_pro = all_products.filter(product__category__id=12)
+
+    form = SubscriberForm(request.POST or None)
+
+    if request.method == "POST" and form.is_valid():
+        print(request.POST)
+        print(form.cleaned_data)
+        data = form.cleaned_data
+        print(form.cleaned_data["email"])
+        new_form = form.save()
+
+    return render(request, 'iPhone_11_pro/iPhone_11_pro.html', locals())
 
 def repairs(request):
 

@@ -19,5 +19,7 @@ urlpatterns = [
     url(r'glass_film/$', views.glass_film, name='glass_film'),
     url(r'wall_charger/$', views.wall_charger, name='wall_charger'),
     url(r'other/$', views.other, name='other'),
+    url(r'^iPhone_11/$', views.iPhone_11, name='iPhone_11'),
+    url(r'^iPhone_11_pro/$', views.iPhone_11_pro, name='iPhone_11_pro'),
 
 ]

@@ -12,6 +12,7 @@ class ProductImageInline(admin.TabularInline):
     extra = 0
 
     class ProductCategoryAdmin(admin.ModelAdmin):
+        list_editable = ['is_active']
         list_display = ['name', 'is_active', 'created']
         list_filter = ['name']
         search_fields = ['name']
@@ -45,7 +46,8 @@ class ProductAdmin (ImportExportActionModelAdmin):
     save_as = True
     resource_class = ProductResource
     fields = [('name', 'category', 'status'), ('price', 'memory', 'vendor_code', 'discount'), 'description', ('is_active', 'top_sales')]
-    list_display = ['Наименование', 'price', 'category', 'Описание', 'is_active']
+    list_editable = ['price', 'category', 'is_active', 'top_sales', 'status']
+    list_display = ['Наименование', 'price', 'category', 'memory', 'is_active', 'top_sales', 'status']
     inlines = [ProductImageInline]
     list_filter = ['category', 'status', 'is_active', 'memory', 'top_sales']
     search_fields = ['name']

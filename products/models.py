@@ -45,10 +45,10 @@ class Product(models.Model):
     status = models.ForeignKey(ProductStatus, blank=True, null=True, default=True, on_delete=models.CASCADE,
                                verbose_name='Статус товара')
     memory = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True, default='64',
-                                 verbose_name='Память устройства (Гб)')
+                                 verbose_name='Память')
     description = models.TextField(blank=True, null=True, default=None, verbose_name='Описание товара')
-    is_active = models.BooleanField(default=True, verbose_name='Наличие товара')
-    top_sales = models.BooleanField(default=False, verbose_name='Лучшие продажи')
+    is_active = models.BooleanField(default=True, verbose_name='Наличие')
+    top_sales = models.BooleanField(default=False, verbose_name='Лучш. пр-жи')
     created = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name='Дата созд-ия записи')
     updated = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name='Дата ред-ия записи')
 
