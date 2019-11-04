@@ -6,6 +6,7 @@ def repairs(request):
     all_repairs = Repair.objects.filter(is_active=True)
 
     form = StatementForm(request.POST or None)
+    a = Form(request.POST or None)
 
     if request.method == "POST" and form.is_valid():
         print(request.POST)
@@ -13,5 +14,6 @@ def repairs(request):
         data = form.cleaned_data
         print(form.cleaned_data['name'])
         new_form = form.save()
+        new_a = a.save()
 
     return render(request, 'repairs/repairs.html', locals())

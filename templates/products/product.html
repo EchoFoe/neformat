@@ -30,9 +30,11 @@
 						<h3>{{ products.name }}</h3>
 						<h2>{{ products.price }} ₽</h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Категория </span> : {{ products.category }}</a></li>
-							<li><a href="#"><span>Память</span> : {{ products.memory }} Gb</a></li>
-                            <li><a href="#"><span>В наличии</span> : да</a></li>
+							<li><a class="active"><span>Категория </span> : {{ products.category }}</a></li>
+                            {% if products.memory %}
+							<li><a><span>Память</span> : {{ products.memory }} Gb</a></li>
+                            {% endif %}
+                            <li><a><span>В наличии</span> : да</a></li>
 						</ul>
 						<p>{{ products.description }}</p>
                         <form id="form_buying_product" class="form-inline" action="{% url 'basket_adding' %}">{% csrf_token %}

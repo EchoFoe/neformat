@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="site-main">
+    <section class="section-margin mt-0">
+        <div class="owl-carousel owl-theme hero-carousel">
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_makbooks_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'laptops' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>MacBook</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_smartphones_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'smartphones' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Смартфоны</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_accessories_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'cables' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Кабели, шнуры для передачи данных</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_iphone_case_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'iphone_case' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Чехлы на iPhone</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_power_bank_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'power_bank' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Внешние аккумуляторы</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_holder_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'holder' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Держатели</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_glass_film_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'glass_film' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Защитные стекла</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_wall_charger_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'wall_charger' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Зарядные устройства</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="../../static/img/category_other_1.jpg" alt="" class="img-fluid">
+                    <a href="{% url 'other' %}" class="hero-carousel__slideOverlay">
+                    <h3>Выберите категорию</h3>
+                    <p>Разное</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-margin calc-60px">
+        <div class="container">
+            <div class="section-intro pb-60px">
+                <p>Товары в наличии:</p>
+                <h2><span class="section-intro__style">Квадрокоптеры </span></h2>
+            </div>
+            <div class="row">
+                {% for products in products_quadrocopter  %}
+                    {% include 'home/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-margin calc-60px">
+        <div class="container">
+            <div class="section-intro pb-60px">
+            <p>Новинки!</p>
+            <h2>Новые <span class="section-intro__style">поступления </span></h2>
+            </div>
+            <div class="owl-carousel owl-theme" id="bestSellerCarousel">
+                {% for products in new_products  %}
+                    {% include 'home/new_product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe-position">
+        <div class="container">
+            <div class="subscribe text-center">
+                <h3 class="subscribe__title">Получайте актуальные новости о поступлении товара </h3>
+                <p>Подпишитесь на рассылку</p>
+                <div id="">
+                    <form action="#" method="post" class="subscribe-form form-inline mt-5 pt-1">{% csrf_token %}
+                        <div class="form-group ml-sm-auto">
+                            <input class="form-control mb-1" required type="email" placeholder="Введите Ваш email" name="{{ form.email.name }}" value="{{ request.POST.name}}" >
+                        <div class="info"></div>
+                        </div>
+                        <button class="button button-subscribe mr-auto mb-1" type="submit">Подписаться!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock content %}
