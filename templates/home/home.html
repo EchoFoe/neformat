@@ -86,6 +86,19 @@
         </div>
     </section>
 
+    <section class="section-margin calc-60px">
+        <div class="container">
+            <div class="section-intro pb-60px">
+            <h2>Отзывы <span class="section-intro__style">клиентов:</span></h2>
+            </div>
+            <div class="owl-carousel owl-theme hero-carousel">
+                {% for reviews in all_reviews  %}
+                    {% include 'home/review_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
 {#    <section class="section-margin calc-60px">#}
 {#        <div class="container">#}
 {#            <div class="section-intro pb-60px">#}

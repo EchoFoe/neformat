@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import *
 from products.models import *
 from repairs.models import *
+from reviews.models import *
 
 def home(request):
 
@@ -10,6 +11,7 @@ def home(request):
     products_phones = all_products.filter(product__category__id=1)
     products_laptops = all_products.filter(product__category__id=2)
     products_cables = all_products.filter(product__category__id=3)
+    all_reviews = ReviewImage.objects.filter(is_active=True, is_main=True, review__is_active=True)
 
     form = SubscriberForm(request.POST or None)
 
