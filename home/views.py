@@ -346,7 +346,7 @@ def watch(request):
         print(form.cleaned_data["email"])
         new_form = form.save()
 
-    return render(request, 'accessories/watch.html', locals())
+    return render(request, 'watch/watch.html', locals())
 
 def watch_series_5(request):
 
@@ -533,6 +533,23 @@ def action_camera(request):
         new_form = form.save()
 
     return render(request, 'action_camera/action_camera.html', locals())
+
+def airpods(request):
+
+    all_products = ProductImage.objects.filter(is_active=True, is_main=True, product__is_active=True)
+    new_products = all_products.filter(product__status__id=1)
+    products_airpods = all_products.filter(product__category__id=29)
+
+    form = SubscriberForm(request.POST or None)
+
+    if request.method == "POST" and form.is_valid():
+        print(request.POST)
+        print(form.cleaned_data)
+        data = form.cleaned_data
+        print(form.cleaned_data["email"])
+        new_form = form.save()
+
+    return render(request, 'airpods/airpods.html', locals())
 
 def repairs(request):
 

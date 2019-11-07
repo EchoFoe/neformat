@@ -39,5 +39,6 @@ urlpatterns = [
     url(r'^iPad_mini/$', views.iPad_mini, name='iPad_mini'),
     url(r'^quadrocopter/$', views.quadrocopter, name='quadrocopter'),
     url(r'^action_camera/$', views.action_camera, name='action_camera'),
+    url(r'^airpods/$', views.airpods, name='airpods'),
 
 ]
