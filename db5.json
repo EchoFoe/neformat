@@ -14188,7 +14188,7 @@
    "pk": 1,
    "fields": {
       "name": "\u041f\u0430\u0432\u0435\u043b",
-      "phone": "\u0432\u0444\u044b\u0432\u0444\u044b",
+      "phone": "4342",
       "email": "echorisestudio@gmail.com",
       "subject": "\u0422\u0435\u0441\u0442\u0438\u0440\u0443\u044e",
       "message": "\u0422\u0435\u0441\u0442\u043e\u0432\u043e\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435. \u0415\u0441\u043b\u0438 \u043e\u043d\u043e \u043f\u0440\u043e\u0448\u043b\u043e \u0432 \u0411\u0414, \u0442\u043e \u0432\u0441\u0435 \u043e\u0442\u043b\u0438\u0447\u043d\u043e :)",
@@ -14201,7 +14201,7 @@
    "pk": 2,
    "fields": {
       "name": "\u041f\u0430\u0432\u0435\u043b",
-      "phone": "\u0432\u0444\u044b\u0432\u044b\u0444",
+      "phone": "432432",
       "email": "aspirpd@gmail.com",
       "subject": "\u0422\u0435\u0441\u0442 \u043d\u043e\u043c\u0435\u0440 2",
       "message": "\u041f\u0440\u043e\u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043b \u0435\u0449\u0435 \u0440\u0430\u0437. \u0412\u0440\u043e\u0434\u0435 \u0432\u0441\u0435 \u043f\u0440\u0438\u0445\u043e\u0434\u0438\u0442 \u0438 \u0432\u0441\u0435 \u043d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u043e",
@@ -29144,6 +29144,32 @@
       "object_repr": "\u0417\u0430\u043c\u0435\u043d\u0430 \u043a\u043e\u0440\u043f\u0443\u0441\u0430:",
       "action_flag": 2,
       "change_message": "[{\"changed\": {\"fields\": [\"iphone_x\", \"iphone_xr\", \"iphone_xs\", \"iphone_xs_max\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 830,
+   "fields": {
+      "action_time": "2019-11-07T18:09:25.194Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "\u041e\u0431\u0440\u0430\u0449\u0435\u043d\u0438\u0435 \u043e\u0442: echorisestudio@gmail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"phone\"]}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 831,
+   "fields": {
+      "action_time": "2019-11-07T18:09:29.181Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "\u041e\u0431\u0440\u0430\u0449\u0435\u043d\u0438\u0435 \u043e\u0442: aspirpd@gmail.com",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"phone\"]}}]"
    }
 }
 ]
