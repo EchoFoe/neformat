@@ -33,7 +33,8 @@ class RepairAdmin (ImportExportActionModelAdmin):
     save_as = True
     resource_class = RepairResource
     fields = ['category', 'iphone_4', ('iphone_5', 'iphone_5s'), ('iphone_6', 'iphone_6_plus', 'iphone_6s', 'iphone_6s_plus'), 'iphone_se', ('iphone_7', 'iphone_7_plus'), ('iphone_8', 'iphone_8_plus'), 'iphone_x', 'iphone_xr', 'iphone_xs', 'iphone_xs_max', 'is_active']
-    list_display = ['category', 'iphone_4', 'iphone_5', 'iphone_5s', 'iphone_6', 'iphone_6_plus', 'iphone_6s', 'iphone_6s_plus', 'iphone_se', 'iphone_7', 'iphone_7_plus', 'iphone_8', 'iphone_8_plus', 'iphone_x', 'iphone_xr', 'iphone_xs', 'iphone_xs_max']
+    list_display = ['category', 'is_active', 'iphone_4', 'iphone_5', 'iphone_5s', 'iphone_6', 'iphone_6_plus', 'iphone_6s', 'iphone_6s_plus', 'iphone_se', 'iphone_7', 'iphone_7_plus', 'iphone_8', 'iphone_8_plus', 'iphone_x', 'iphone_xr', 'iphone_xs', 'iphone_xs_max']
+    list_editable = ['is_active']
     inlines = [ProductImageInline]
     list_filter = ['category']
 

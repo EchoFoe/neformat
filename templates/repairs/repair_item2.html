@@ -1,0 +1,16 @@
+<div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+    <div class="categories_post">
+        <a href="{% url 'repair' repairs.repair.id %}">
+            <img class="card-img-repairs rounded-0" src="{{ repairs.image.url }}" alt="post">
+        </a>
+        <div class="categories_details">
+            <div class="categories_text">
+                <a href="{% url 'repair' repairs.repair.id %}">
+                    <h5>{{ repairs.repair.category }}</h5>
+                </a>
+                <div class="border_line"></div>
+                    <p>Цены ориентировочны</p>
+            </div>
+        </div>
+    </div>
+</div>

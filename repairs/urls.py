@@ -9,6 +9,7 @@ admin.autodiscover()
 urlpatterns = [
 
     url(r'repairs/$', views.repairs, name='repairs'),
+    url(r'^repairs/(?P<repair_id>\w+)/$', views.repair, name='repair'),
 
 ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \

@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <link rel="icon" href="../../static/img/Fevicon.png" type="image/png">
+    <link rel="stylesheet" href="../../static/vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../static/vendors/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../../static/vendors/linericon/style.css">
+    <link rel="stylesheet" href="../../static/vendors/nice-select/nice-select.css">
+    <link rel="stylesheet" href="../../static/vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../static/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../static/css/style_1.css">
+
+<main class="site-main">
+
+    <section class="order_details section-margin--small">
+        <div class="container">
+            <p class="text-center">Наши специалисты выполнят Вам ремонт устройства любой сложности! Мы готовы за минимальную сумму и время, восстановить ваш мартфон, ipad, maсbook на выезде, у Вас дома. Кроме того, ремонт устройства производится при Вас! Вы сможете задать интересующие вопросы мастеру, и проследить качество выполняемого ремонта.</p>
+            <div class="order_details_table">
+                <h2 class="text-center">{{ repairs_link.category }}</h2>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Наименование модели</th>
+                                <th scope="col"></th>
+                                <th scope="col">Цена*</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><h5>IPhone 4/4s:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_4 }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 5/5c:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_5 }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 5s:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_5s }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 6:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_6 }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 6+:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_6_plus }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 6s:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_6s }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 6s+:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_6s_plus }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone SE:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_se }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 7:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_7 }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 7+:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_7_plus }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 8:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_8 }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone 8+:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_8_plus }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone X:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_x }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone Xr:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_xr }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone Xs:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_xs }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h5>IPhone Xs Max:</h5></td>
+                                <td><h5></h5></td>
+                                <td><h4>{{ repairs_link.iphone_xs_max }} ₽</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h4></h4></td>
+                                <td><h5></h5></td>
+                                <td><h4></h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-margin--small">
+        <div class="container">
+            <div class="row">
+                <p class="text-center">Вы всегда можете оставить он-лайн заявку для ремонта Вашей техники. Заполните её и с Вами свяжется наш сотрудник для уточнения информации и назначения времени.</p>
+                <div class="col-md-12 col-lg-12">
+                    <br><br>
+                    <form action="#" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">{% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.name.name }}" id="name" required type="text" placeholder="Введите Ваше имя">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.email.name }}" id="email" required type="email" placeholder="Ваш email">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.phone.name }}" id="number" required type="tel" placeholder="Ваш номер телефона">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="{{ form.subject.name }}" id="name" required type="text" placeholder="Опишите Вашу проблему">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <textarea class="form-control different-control w-100" name="{{ form.message.name }}" id="message" cols="30" rows="5" placeholder="Ваш адрес"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center text-md-right mt-3">
+                            <button type="submit" class="button button--active button-contactForm">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="subscribe-position">
+        <div class="container">
+            <div class="subscribe text-center">
+                <h3 class="subscribe__title">Получайте актуальные новости о поступлении товара </h3>
+                <p>Подпишитесь на рассылку</p>
+                <div id="">
+                    <form action="#" method="post" class="subscribe-form form-inline mt-5 pt-1">{% csrf_token %}
+                        <div class="form-group ml-sm-auto">
+                            <input class="form-control mb-1" required type="email" placeholder="Введите Ваш email" name="{{ form.email.name }}" value="{{ request.POST.name}}" >
+                        <div class="info"></div>
+                        </div>
+                        <button class="button button-subscribe mr-auto mb-1" type="submit">Подписаться!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../static/vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../static/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../static/vendors/skrollr.min.js"></script>
+    <script src="../../static/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../../static/vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="../../static/vendors/jquery.ajaxchimp.min.js"></script>
+    <script src="../../static/vendors/mail-script.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script src="../../static/js/cart.js"></script>
+</main>
+
+{% endblock content %}

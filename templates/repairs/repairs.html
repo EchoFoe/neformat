@@ -72,78 +72,99 @@
         </div>
     </section>
 
-    <section class="product_description_area">
-		<div class="container">
-			<div class="tab-content">
-                <p class="text-center">Neformat-inc выполнит Вам ремонт устройства любой сложности! Мы готовы за минимальную сумму и время, восстановить ваш Iphone (айфон) , ipad, maсbook на выезде, у вас дома. Кроме того, ремонт айфона (IPhone) производится при Вас! Вы сможете задать интересующие вопросы мастеру, и проследить качество выполняемого ремонта.</p>
-            <br>
-				<div class="">
-					<div class="table-responsive">
-						<table class="table">
-							<tbody>
-                                <tr>
-									<td>
-										<h6>Услуга</h6>
-									</td>
-									<td>
-										<h6>IPhone 4/4s</h6>
-									</td>
-                                    <td>
-										<h6>IPhone 5/5c</h6>
-									</td>
-                                    <td>
-										<h6>IPhone 5s</h6>
-									</td>
-									<td>
-										<h6>IPhone 6</h6>
-									</td>
-                                    <td>
-										<h6>IPhone 6+</h6>
-									</td>
-                                    <td>
-										<h6>IPhone 6s</h6>
-									</td>
-                                    <td>
-										<h6>IPhone 6s+</h6>
-									</td>
-                                    <td>
-										<h6>IPhone SE</h6>
-									</td>
-									<td>
-										<h6>IPhone 7</h6>
-									</td>
-                                    <td>
-										<h6>IPhone 7+</h6>
-									</td>
-                                    <td>
-										<h6>IPhone 8</h6>
-									</td>
-                                    <td>
-										<h6>IPhone 8+</h6>
-									</td>
-									<td>
-										<h6>IPhone X</h6>
-									</td>
-                                    <td>
-										<h6>IPhone Xr</h6>
-									</td>
-                                    <td>
-										<h6>IPhone Xs</h6>
-									</td>
-                                    <td>
-										<h6>IPhone Xs MAX</h6>
-									</td>
-								</tr>
-								{% for repairs in all_repairs  %}
-                                    {% include 'repairs/repair_item.html' %}
-                                {% endfor %}
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section class="blog_categorie_area">
+        <div class="container">
+            <div class="row">
+            <p class="text-center">Наши специалисты выполнят Вам ремонт устройства любой сложности! Мы готовы за минимальную сумму и время, восстановить ваш мартфон, ipad, maсbook на выезде, у Вас дома. Кроме того, ремонт устройства производится при Вас! Вы сможете задать интересующие вопросы мастеру, и проследить качество выполняемого ремонта.</p>
+                {% for repairs in all_repairs2 %}
+                    {% include 'repairs/repair_item2.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{#    <section class="product_description_area">#}
+{#		<div class="container">#}
+{#			<ul class="nav nav-tabs" id="myTab" role="tablist">#}
+{#                {% for repairs in all_categories %}#}
+{#                    {% include 'repairs/repair_category_item.html' %}#}
+{#                {% endfor %}#}
+{#			</ul>#}
+{#		</div>#}
+{#	</section>#}
+
+{#    <section class="product_description_area">#}
+{#        <div class="container">#}
+{#            <div class="tab-content">#}
+{#                <p class="text-center">Neformat-inc выполнит Вам ремонт устройства любой сложности! Мы готовы за минимальную сумму и время, восстановить ваш Iphone (айфон) , ipad, maсbook на выезде, у вас дома. Кроме того, ремонт айфона (IPhone) производится при Вас! Вы сможете задать интересующие вопросы мастеру, и проследить качество выполняемого ремонта.</p>#}
+{#            <br>#}
+{#                <div class="">#}
+{#                    <div class="table-responsive">#}
+{#                        <table class="table">#}
+{#                            <tbody>#}
+{#                                <tr>#}
+{#                                    <td>#}
+{#                                        <h6>Услуга</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 4/4s</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 5/5c</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 5s</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 6</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 6+</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 6s</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 6s+</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone SE</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 7</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 7+</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 8</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone 8+</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone X</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone Xr</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone Xs</h6>#}
+{#                                    </td>#}
+{#                                    <td>#}
+{#                                        <h6>IPhone Xs MAX</h6>#}
+{#                                    </td>#}
+{#                                </tr>#}
+{#                                {% for repairs in all_repairs  %}#}
+{#                                    {% include 'repairs/repair_item.html' %}#}
+{#                                {% endfor %}#}
+{#                            </tbody>#}
+{#                        </table>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
 
 <section class="section-margin--small">
         <div class="container">
